@@ -14,3 +14,7 @@ __pycache__/
 *.bak.*
 *.swp
 .DS_Store
+
+# nested caches
+**/__pycache__/
+*.pyc
