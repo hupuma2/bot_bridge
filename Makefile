@@ -1,0 +1,19 @@
+.PHONY: verify health status bundle backup
+
+verify:
+	./scripts/verify_digest_policyblock.sh
+
+health:
+	./scripts/release_healthcheck.sh
+
+status:
+	git status
+	git log --oneline --decorate -n 10
+
+bundle:
+	git bundle create bot_bridge-$$(date +%Y%m%d-%H%M%S).bundle --all --tags
+
+backup:
+	mkdir -p $$HOME/backups/bot_bridge
+	cp -f ./*.bundle $$HOME/backups/bot_bridge/ 2>/dev/null || true
+	ls -lh $$HOME/backups/bot_bridge/
