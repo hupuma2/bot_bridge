@@ -17,3 +17,7 @@ backup:
 	mkdir -p $$HOME/backups/bot_bridge
 	cp -f ./*.bundle $$HOME/backups/bot_bridge/ 2>/dev/null || true
 	ls -lh $$HOME/backups/bot_bridge/
+
+smoke:
+	$(MAKE) verify
+	$(MAKE) health
