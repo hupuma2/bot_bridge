@@ -21,3 +21,11 @@ backup:
 smoke:
 	$(MAKE) verify
 	$(MAKE) health
+
+help:
+	@echo "Targets:"
+	@echo "  make verify   - run digest policy_block verification"
+	@echo "  make health   - run release healthcheck"
+	@echo "  make smoke    - run verify + health"
+	@echo "  make bundle   - create git bundle backup"
+	@echo "  make backup   - copy bundles to ~/backups/bot_bridge"
