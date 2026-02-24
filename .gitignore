@@ -1,0 +1,16 @@
+# runtime data
+data/
+logs/
+tmp/
+
+# local config / secrets (adjust if needed)
+config/
+
+# caches
+__pycache__/
+*.pyc
+
+# backups
+*.bak.*
+*.swp
+.DS_Store
