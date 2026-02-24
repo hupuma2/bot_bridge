@@ -1,4 +1,4 @@
-.PHONY: verify health status bundle backup
+.PHONY: verify health status bundle backup help smoke
 
 verify:
 	./scripts/verify_digest_policyblock.sh
